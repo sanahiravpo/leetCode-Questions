@@ -1,0 +1,54 @@
+Program to enter a number and check whether that no is the perfect number or not using for loop in C#
+
+
+
+
+
+MY SOLUTION
+
+
+using System;
+using System.ComponentModel.DataAnnotations;
+namespace MyProject
+{
+    class Program
+    {
+      static void Main(string[] args)
+        {
+            Console.WriteLine("enter a number ");
+            
+            int num = Convert.ToInt32(Console.ReadLine());
+            int temp = num;
+            int rem;
+            int res;
+            int result = 0;
+            int sum = 0;
+            int length = temp.ToString().Length;
+            while (temp > 0)
+            {
+                rem = temp % 10;
+                res = (int)Math.Pow(rem,length);
+                sum = sum + res;
+                result = result * 10 + rem;
+                temp = temp / 10;
+            }
+
+
+
+
+            if ( num== sum)
+            {
+                Console.WriteLine("this  is a armstrong number");
+            }
+            else
+            {
+                Console.WriteLine("this is not a armstrong number");
+            }
+
+
+        }
+
+    }
+}
+
+
