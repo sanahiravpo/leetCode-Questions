@@ -2,7 +2,6 @@ Program to enter a number and check whether that no is the perfect number or not
 
 
 
-
 MY SOLUTION:
 using System;
 namespace MyProject
