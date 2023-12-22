@@ -1,0 +1,40 @@
+Program to enter a number and check whether that no is the perfect number or not using for loop in C#
+
+
+
+
+MY SOLUTION:
+using System;
+namespace MyProject
+{
+    class Program
+    {
+      static void Main(string[] args)
+        {
+            Console.WriteLine("enter a number ");
+            
+            int num = Convert.ToInt32(Console.ReadLine());
+            int sum = 0;
+            for (int i = 1; i < num; i++)
+            {
+                if (num % i == 0)
+                {
+                    sum = sum + i;
+                }
+
+            }
+            if (sum == num)
+            {
+                Console.WriteLine($"this is a perfect number{num}");
+            }
+            else
+            {
+                Console.WriteLine($"this is not a perfect number{num}");
+            }
+
+        }
+
+    }
+}
+
+
