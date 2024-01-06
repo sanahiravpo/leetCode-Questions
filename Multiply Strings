@@ -1,0 +1,14 @@
+Given two non-negative integers num1 and num2 represented as strings, return the product of num1 and num2, also represented as a string.
+
+
+--MYSOLUTION   IN C#;
+
+
+public class Solution {
+    public string Multiply(string num1, string num2) {
+        BigInteger result = BigInteger.Parse(num1) * BigInteger.Parse(num2);
+        return result.ToString();
+    }
+}
+const res=Multiply("2","3");
+console.WriteLine(res);
