@@ -1,0 +1,26 @@
+Given an array of strings words, return the first palindromic string in the array. If there is no such string, return an empty string "".
+
+A string is palindromic if it reads the same forward and backward.
+
+Input: words = ["abc","car","ada","racecar","cool"]
+Output: "ada"
+
+
+
+MY SOLUTION
+
+public class Solution {
+    public string FirstPalindrome(string[] words) {
+ int i;
+         for(i=1;i<words.Length;i++){
+     char [] charecter=words[i].ToCharArray();
+     Array.Reverse(charecter);
+     string  reversearray=new string(charecter);
+     if( words[i]==reversearray){
+         return words[i];
+
+     }
+ }
+ return "";
+    }
+}
