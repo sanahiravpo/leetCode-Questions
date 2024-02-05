@@ -1,0 +1,35 @@
+Given a sorted  integer array of n elements  and a target value,write a function to search target in  array ,if target exists,then return its index,otherwise return -1
+
+
+namespace ConsoleApp6
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            findelemnt([-1,0,3,5,9,12],9);
+            
+
+        }
+        public static int  findelemnt(int [] array,int target) {
+
+            int i;
+            for (i = 0; i < array.Length; i++)
+            {
+                if (array[i] == target)
+                {
+
+
+                    Console.WriteLine(i);
+                }
+                
+
+            };
+            return -1;
+
+
+        }
+
+ 
+    }
+}
