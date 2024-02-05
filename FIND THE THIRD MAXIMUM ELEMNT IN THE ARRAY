@@ -1,0 +1,25 @@
+
+FIND THE THIRD MAXIMUM ELEMNT IN THE ARRAY
+
+
+MY SOLUTION
+
+
+namespace ConsoleApp6
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Thirdmaximumelement([3, 2, 1, 5, 4]);
+
+        }
+  public static void Thirdmaximumelement(int[] a)
+        {
+              Array.Sort(a);
+            int length = a[2];
+          
+            Console.WriteLine("the third maximum element is"+ length);
+        }
+    }
+}
