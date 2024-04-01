@@ -1,0 +1,28 @@
+Contains Duplicate
+
+Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
+
+ 
+
+Example 1:
+
+Input: nums = [1,2,3,1]
+Output: true
+
+
+ans
+
+public class Solution {
+    public bool ContainsDuplicate(int[] nums) {
+         HashSet<int>set=new HashSet<int>();
+         foreach(int i in nums){
+            if(set.Contains(i)){
+                return true;
+            }
+            else{
+                set.Add(i);
+            }
+         }
+           return false;
+    }
+}
