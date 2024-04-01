@@ -12,3 +12,14 @@ public class Solution {
 }
 const res=Multiply("2","3");
 console.WriteLine(res);
+
+
+or
+public class Solution {
+    public string Multiply(string num1, string num2) {
+        int number1=int.TryParse(num1);
+          int number2=int.TryParse(num2);
+          int result=number1*number2;
+          return result.ToString();
+
+    }
