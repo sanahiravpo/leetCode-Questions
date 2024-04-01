@@ -1,0 +1,38 @@
+Single Number
+
+Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
+
+You must implement a solution with a linear runtime complexity and use only constant extra space.
+
+ 
+
+Example :
+
+Input: nums = [2,2,1]
+Output: 1
+
+ans:
+public class Solution {
+    public int SingleNumber(int[] nums) {
+int k=0;
+
+for(int i=0;i<nums.Length;i++){
+    bool founded=false;
+    for(int j=0;j<nums.Length;j++){
+        if(nums[i]==nums[j] && i!=j){
+          
+            founded=true;
+              break;
+        }
+
+    }
+        if(!founded){
+            k=nums[i];
+              break;
+}    
+}
+  return k;
+
+   }
+ 
+}
