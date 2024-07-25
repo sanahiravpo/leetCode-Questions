@@ -1,0 +1,36 @@
+
+using System;
+
+public class Solution
+{
+
+
+    public int[] SearchRange(int[] nums, int target)
+    {
+        int[] number = new int[2];
+        int j = 0;
+        int i;
+        for (i = 0; i < nums.Length; i++)
+        {
+            if (nums[i] == target)
+            {
+                number[j] = i;
+                j++;
+
+            }
+        }
+        return number;
+    }
+}
+public class Session
+{
+    public static void  Main(string[] args)
+    {
+        Solution s = new Solution();
+        var numf = s.SearchRange([5, 7, 7, 8, 8, 10], 8);
+        foreach (var i in numf)
+        {
+            Console.WriteLine(i);
+        }
+    }
+}
