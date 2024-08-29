@@ -1,0 +1,48 @@
+
+You are given a positive integer n. Each digit of n has a sign according to the following rules:
+
+The most significant digit is assigned a positive sign.
+Each other digit has an opposite sign to its adjacent digits.
+Return the sum of all digits with their corresponding sign.
+
+
+
+
+
+using System;
+
+namespace hdsj
+{
+    public class positivetrigger
+    {
+
+        public static void Main(string[] args)
+        {
+            positivetrigger sol=new positivetrigger();
+           int result= sol.positivenum(521);
+            Console.WriteLine(result);
+
+        }
+
+
+        public int positivenum(int number)
+        {
+            string a = number.ToString();
+            int sum = 0;
+            for (int i = 0; i < a.Length; i++)
+            {
+                int digit=a[i]-'0';
+                if (i % 2 == 0)
+                {
+                    sum += digit;
+
+                }
+                else
+                {
+                    sum -= digit;
+                }
+            }
+            return sum;
+        }
+    }
+}
